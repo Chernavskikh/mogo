@@ -1,0 +1,40 @@
+.navbar-header {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.navbar-nav {
+    padding-top: 25px;
+
+    > li {
+        > a {
+            color: var(--colorWhite);
+            font-family: var(--fontMontserrat);
+            font-size: 14px;
+            padding: 0;
+            margin-left: 50px;
+            transition: all 0.5s;
+            position: relative;
+
+            &:hover {
+                color: var(--colorYellow);
+                background: transparent;
+
+                &::after {
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    height: 3px;
+                    background: var(--colorYellow);
+                    position: absolute;
+                    left: 0;
+                    top: 25px;
+                }
+            }
+
+            i {
+                font-size: 15px;
+            }
+        }
+    }
+}

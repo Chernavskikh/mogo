@@ -1,0 +1,28 @@
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
+
+@define-mixin reset $fz {
+    color: var(--colorDark);
+    font-family: var(--fontRoboto);
+    font-size: $fz;
+    -webkit-font-smoothing: antialiased;
+}
+
+@define-mixin flex $dir, $wrap, $jc, $ai {
+    display: flex;
+    flex-flow: $dir $wrap;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    @mixin reset 16px;
+}
