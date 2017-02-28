@@ -90,10 +90,11 @@
         font-size: 30px;
         font-weight: bold;
         margin: 20px 0 40px;
+        text-transform: uppercase;
     }
 
     &__divider {
-        background: #f38181;
+        background: var(--colorRed);
         display: inline-block;
         height: 3px;
         width: 60px;
@@ -107,16 +108,6 @@
     }
 }
 
-.section {
-    &-about {
-        padding-top: 85px;
-
-        .hover-item {
-            margin: 100px 0;
-        }
-    }
-}
-
 .hover-item {
     position: relative;
     background: var(--colorMint);
@@ -124,6 +115,12 @@
     &__move-block {
         display: block;
         transition: all 0.6s ease;
+
+        > img {
+            max-width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
         &::after {
             content: '';
@@ -146,9 +143,8 @@
         font-weight: bold;
         color: var(--colorWhite);
         position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translateY(-50%) translateX(-50%);
+        width: 100%;
+        height: 100%;
         opacity: 0;
         z-index: 10;
         transition: all 0.7s;
@@ -156,10 +152,6 @@
         > img {
             margin-bottom: 5px;
         }
-    }
-
-    img {
-        max-width: 100%;
     }
 
     &:hover {
@@ -174,5 +166,146 @@
         .hover-item__content {
             opacity: 1;
         }
+    }
+}
+
+.statistic-section {
+    .flex-container {
+        @mixin flex row, nowrap, center, center;
+
+        &__item {
+            @mixin flex column, nowrap, center, center;
+
+            width: 25%;
+            font-size: 14px;
+            text-transform: uppercase;
+            font-family: var(--fontMontserrat);
+            color: var(--colorWhite);
+            height: 270px;
+            border-right: 1px solid #b5eae0;
+
+            &:last-child {
+                border-right: none;
+            }
+
+            > span {
+                font-size: 72px;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.info-card {
+    @mixin flex row, nowrap, flex-start, flex-start;
+
+    &__img {
+        margin-right: 30px;
+    }
+
+    &__title {
+        margin-top: 0;
+        font-size: 14px;
+        font-family: var(--fontMontserrat);
+        color: var(--colorDark);
+        text-transform: uppercase;
+    }
+
+    &__text {
+        font-size: 15px;
+        font-family: var(--fontRoboto);
+        color: var(--colorGray);
+    }
+}
+
+.wrap-line {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #e5e5e5;
+    margin: 50px 0;
+}
+
+.card {
+    &-label {
+        font-family: var(--fontMontserrat);
+        font-size: 14px;
+        color: var(--colorDark);
+        text-align: center;
+        padding: 30px 0;
+
+        p {
+            text-transform: uppercase;
+        }
+
+        span {
+            font-family: var(--fontRoboto);
+            font-size: 14px;
+            font-weight: 300;
+            font-style: italic;
+            color: var(--colorGray);
+            display: block;
+        }
+    }
+}
+
+.brand-container {
+    @mixin flex row, nowrap, space-between, center;
+
+    padding: 60px 10px;
+}
+
+.quote-carousel-block {
+    margin-top: 110px;
+}
+
+.gallery-grid {
+    @mixin flex row, nowrap, space-between, flex-start;
+
+    &__section {
+        width: 50%;
+    }
+}
+
+.client-profile {
+    @mixin flex row, nowrap, space-between, flex-start;
+
+    max-width: 520px;
+    margin: 0 auto 65px;
+
+    &__avatar {
+        margin-right: 25px;
+    }
+
+    &__name {
+        font-family: var(--fontMontserrat);
+        font-size: 14px;
+        color: var(--colorDark);
+        text-transform: uppercase;
+        margin-top: 5px;
+    }
+
+    &__subject {
+        font-family: var(--fontRoboto);
+        font-style: italic;
+        font-weight: 300;
+        margin-bottom: 20px;
+
+        &::after {
+            content: '';
+            display: block;
+            height: 4px;
+            width: 60px;
+            background: var(--colorRed);
+            margin-top: 15px;
+        }
+    }
+
+    &__description {
+        font-family: var(--fontRoboto);
+        font-size: 15px;
+        font-weight: 500;
+        color: var(--colorGray);
+        line-height: 24px;
     }
 }

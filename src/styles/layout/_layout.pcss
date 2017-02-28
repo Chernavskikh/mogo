@@ -5,5 +5,92 @@
 
 .bg-mint {
     background: var(--colorMint);
-    height: 200px;
+}
+
+.bg-light-grey {
+    background: var(--colorLightGray);
+}
+
+.section {
+    &-about {
+        padding-top: 85px;
+
+        .hover-item {
+            margin: 100px 0;
+        }
+    }
+
+    &-services {
+        padding: 110px 0 120px;
+
+        .section-title {
+            margin-bottom: 60px;
+        }
+    }
+
+    &-design {
+        background: url(../img/forest-bg.png) center/cover repeat;
+        min-height: 850px;
+        padding-top: 106px;
+
+        &__image-wrapper {
+            max-width: 460px;
+            position: relative;
+            margin: 0 auto;
+
+            .overflow-wrapper {
+                overflow: hidden;
+
+                img {
+                    position: relative;
+                    top: 100px;
+                }
+            }
+
+            &::after {
+                content: '';
+                background: url(../img/phone.png) center/cover repeat;
+                width: 274px;
+                height: 475px;
+                display: block;
+                position: absolute;
+                bottom: -90px;
+                right: -170px;
+            }
+        }
+    }
+
+    &-do-work {
+        padding-top: 110px;
+
+        .section-title {
+            margin-bottom: 90px;
+        }
+    }
+
+    &-team {
+        padding: 100px 0;
+
+        .section-title {
+            margin-bottom: 80px;
+        }
+    }
+
+    &-our-work {
+        padding-top: 100px;
+    }
+
+    &-clients {
+        .section-title {
+            margin-bottom: 65px;
+        }
+
+        background: url(../img/mountions-bg.jpg) center/cover repeat;
+        min-height: 840px;
+        padding-top: 120px;
+    }
+
+    &-blog {
+        padding-top: 110px;
+    }
 }

@@ -1,0 +1,30 @@
+.btn-group {
+    > .btn {
+        @mixin flex column, nowrap, center, center;
+
+        width: 60px;
+        height: 60px;
+        border-radius: 0;
+        border: 1px solid var(--colorOrange);
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+        background: var(--colorYellow);
+        color: var(--colorOrange);
+        font-size: 28px;
+        transition: all 0.5s;
+
+        &:last-child {
+            border-right-color: transparent;
+        }
+
+        &:first-child {
+            border-left-color: transparent;
+        }
+
+        &:hover {
+            background: var(--colorOrange);
+            color: var(--colorWhite);
+        }
+    }
+}
+

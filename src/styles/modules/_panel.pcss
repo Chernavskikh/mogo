@@ -1,0 +1,52 @@
+.panel-group {
+    margin-bottom: 0;
+
+    .panel:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    .panel-default {
+        border-radius: 0;
+        background: var(--colorWhite);
+
+        > .panel-heading {
+            background: var(--colorWhite);
+            padding: 0;
+
+            a {
+                display: flex;
+                align-items: center;
+                padding: 13px 15px;
+                font-family: var(--fontMontserrat);
+                text-transform: uppercase;
+                color: var(--colorDark);
+                text-decoration: none;
+
+                img {
+                    margin-right: 15px;
+                }
+
+                i {
+                    margin-left: auto;
+                    color: #ccc;
+                    font-size: 30px;
+                }
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .panel-body {
+            font-family: var(--fontRoboto);
+            font-weight: 300;
+            font-style: italic;
+            color: var(--colorGray);
+            font-size: 15px;
+            height: 180px;
+            overflow: auto;
+            padding: 15px 60px 15px 20px;
+        }
+    }
+}
