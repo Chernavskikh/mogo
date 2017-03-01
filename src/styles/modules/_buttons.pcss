@@ -28,3 +28,31 @@
     }
 }
 
+.btn-map {
+    @mixin flex column, nowrap, flex-start, center;
+
+    color: var(--colorRed);
+    font-family: var(--fontMontserrat);
+    font-weight: bold;
+    font-size: 24px;
+    margin: auto;
+
+    i {
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        height: 4px;
+        width: 60px;
+        background: var(--colorRed);
+        margin-top: 15px;
+    }
+
+    &:hover {
+        text-decoration: none;
+        color: var(--colorRed);
+    }
+}
