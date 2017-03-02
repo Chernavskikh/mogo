@@ -12,8 +12,7 @@
             font-family: var(--fontMontserrat);
             font-size: 14px;
             padding: 0;
-            margin-left: 50px;
-            transition: all 0.5s;
+            transition: color 0.5s;
             position: relative;
 
             &:hover {
@@ -35,6 +34,26 @@
             i {
                 font-size: 15px;
             }
+
+            @media (width <768px) {
+                padding: 5px 0;
+            }
+
+            @media (width >= 768px) {
+                margin-left: 35px;
+            }
+
+            @media (width >= 992px) {
+                margin-left: 50px;
+            }
         }
     }
+
+    @media (width >= 768px) and (width <= 992px) {
+        padding-top: 17px;
+    }
+}
+
+.navbar-toggle .icon-bar {
+    background: var(--colorWhite);
 }
