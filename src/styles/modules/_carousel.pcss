@@ -38,7 +38,8 @@
     margin: 0 auto;
 
     img {
-        margin-right: 60px;
+        width: 15%;
+        margin-right: 8%;
     }
 
     > div {
@@ -46,11 +47,15 @@
     }
 
     p {
-        font-size: 24px;
+        font-size: 15px;
         font-family: var(--fontRoboto);
         font-weight: 300;
         font-style: italic;
         color: var(--colorGray);
+
+        @media (width >= 768px) {
+            font-size: 24px;
+        }
     }
 
     .sign {
