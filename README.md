@@ -3,7 +3,7 @@
 ### Usage
 
 ```
-npm install
+yarn install
 gulp dev (for development) or gulp (for production)
 open http://localhost:8080
 ```
