@@ -16,6 +16,7 @@ uglify = require('gulp-uglify'),
 retinize = require('gulp-retinize'),
 fontmin = require('gulp-fontmin'),
 htmlImport = require('gulp-html-import');
+deploy = require('gulp-gh-pages');
 
 // server connect
 gulp.task('connect', function () {
@@ -110,3 +111,11 @@ gulp.task('watch', function () {
 
 gulp.task('default', ['html', 'styles', 'compressor', 'js']);
 gulp.task('dev', ['connect', 'html', 'styles', 'copy', 'js', 'watch']);
+
+/**
+ * Push build to gh-pages
+ */
+gulp.task('deploy', ['default'], function () {
+	return gulp.src("./dist/**/*")
+		.pipe(deploy())
+});
