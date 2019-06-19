@@ -1,5 +1,4 @@
 var gulp = require('gulp'),
-livereload = require('gulp-livereload'),
 connect = require('gulp-connect'),
 imagemin = require('gulp-imagemin'),
 pngquant = require('imagemin-pngquant'),
@@ -14,10 +13,8 @@ config = require('./stylelint.config.js'),
 gutil = require('gutil'),
 uglify = require('gulp-uglify'),
 retinize = require('gulp-retinize'),
-fontmin = require('gulp-fontmin'),
 htmlImport = require('gulp-html-import');
 path = require('path');
-ghPages = require('gh-pages');
 
 // server connect
 gulp.task('connect', function () {
@@ -111,14 +108,4 @@ gulp.task('watch', function () {
 });
 
 gulp.task('default', ['html', 'styles', 'compressor', 'js']);
-gulp.task('deploy', ['html', 'styles', 'compressor', 'js']);
 gulp.task('dev', ['connect', 'html', 'styles', 'copy', 'js', 'watch']);
-
-/**
- * Push build to gh-pages
- */
-
-function deploy(cb) {
-	ghPages.publish(path.join(process.cwd(), './dist'), cb);
-}
-exports.deploy = deploy;
